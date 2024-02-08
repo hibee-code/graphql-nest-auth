@@ -1,21 +1,20 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "declaration": true,
+    "declaration": false,
     "removeComments": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "target": "ES2021",
+    "target": "es2017",
     "sourceMap": true,
     "outDir": "./dist",
     "baseUrl": "./",
-    "incremental": true,
-    "skipLibCheck": true,
-    "strictNullChecks": false,
-    "noImplicitAny": false,
-    "strictBindCallApply": false,
-    "forceConsistentCasingInFileNames": false,
-    "noFallthroughCasesInSwitch": false
-  }
+    "paths": {
+      "@app/*": ["./src/*"]
+    },
+    "incremental": true
+  },
+  "exclude": ["node_modules", "dist", "graphql"]
 }
